@@ -5,8 +5,8 @@ def create_test():
     id = response.json()["id"]
 
     assert response.status_code == 200
-
-    response1 = requests.delete("https://todo-app-sky.herokuapp.com/{id}")
-
-    assert response1.status_code == 404
     
+
+    response1 = requests.delete(f"https://todo-app-sky.herokuapp.com/{id}")
+
+    assert response1.status_code == 200
